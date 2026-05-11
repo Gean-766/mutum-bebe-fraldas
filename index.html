@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#1a0d1f" />
+<meta name="description" content="Grupo VIP gratuito de promoções e cupons para o mundo bebê. Fraldas, roupinhas, carrinhos e muito mais com até 70% OFF." />
+<meta name="robots" content="noindex, nofollow" />
+
+<title>Mutum Bebê & Fraldas — Grupo VIP de Promoções</title>
+
+<!-- ============================================================ -->
+<!-- 🔧 CONFIGURAÇÃO RÁPIDA — TROQUE AQUI QUANDO PRECISAR        -->
+<!-- ============================================================ -->
+<!--
+    1. META PIXEL ID    → Substitua "SEU_PIXEL_ID_AQUI" pelo seu ID real
+    2. LINK DO GRUPO    → Edite a variável GRUPO_LINK no <script> no final
+                          Quando um grupo encher, troque só essa linha.
+-->
+
+<!-- ============================================================ -->
+<!-- META PIXEL — Facebook/Meta Ads                              -->
+<!-- ============================================================ -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'SEU_PIXEL_ID_AQUI');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1" alt=""/>
+</noscript>
+<!-- ============================================================ -->
+
+<!-- Fontes: combinação distinta para escapar do "Inter genérico" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-deep:        #14080f;
+    --bg-soft:        #1f0f1a;
+    --bg-card:        #2a1622;
+    --rose:           #f9c5d4;
+    --rose-soft:      #fde2ea;
+    --rose-deep:      #e98aa7;
+    --gold:           #f0c674;
+    --gold-soft:      #ffe7a8;
+    --whats:          #25d366;
+    --whats-glow:     #4af081;
+    --text-main:      #fff5f8;
+    --text-soft:      #d4b8c4;
+    --text-mute:      #8c6e7d;
+    --border-soft:    rgba(249, 197, 212, 0.12);
+    --border-glow:    rgba(249, 197, 212, 0.28);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg-deep);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  body {
+    background:
+      radial-gradient(ellipse at top, rgba(233, 138, 167, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at bottom, rgba(240, 198, 116, 0.08) 0%, transparent 60%),
+      var(--bg-deep);
+    background-attachment: fixed;
+    padding: 24px 18px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Grain sutil para textura premium */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.8 0 0 0 0 0.85 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    animation: fadeUp 0.7s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ============ HEADER / LOGO ============ */
+  .hero {
+    text-align: center;
+    padding-top: 8px;
+  }
+
+  .badge-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(240, 198, 116, 0.12);
+    border: 1px solid rgba(240, 198, 116, 0.3);
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    margin-bottom: 18px;
+    animation: pulse-soft 2.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(240, 198, 116, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(240, 198, 116, 0); }
+  }
+
+  .badge-top .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--gold);
+  }
+
+  .logo-wrap {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--rose-soft) 0%, var(--rose) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+      0 0 0 4px rgba(240, 198, 116, 0.4),
+      0 0 0 8px rgba(240, 198, 116, 0.15),
+      0 20px 60px -10px rgba(233, 138, 167, 0.5);
+    animation: float 3.5s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .logo-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -16px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(249, 197, 212, 0.4) 0%, transparent 70%);
+    z-index: -1;
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  @keyframes glow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.08); }
+  }
+
+  .logo-emoji {
+    font-size: 72px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+  }
+
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.15;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+  }
+
+  h1 .accent {
+    background: linear-gradient(135deg, var(--rose-deep) 0%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-soft);
+    margin-bottom: 22px;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ============ BOTÃO CTA ============ */
+  .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 19px 24px;
+    background: linear-gradient(135deg, var(--whats) 0%, #1ebc59 100%);
+    color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow:
+      0 8px 24px -4px rgba(37, 211, 102, 0.5),
+      0 0 0 1px rgba(74, 240, 129, 0.3) inset;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .cta-button:hover::before,
+  .cta-button:active::before {
+    left: 100%;
+  }
+
+  .cta-button:active {
+    transform: scale(0.98);
+  }
+
+  .cta-button .icon-wa {
+    width: 22px;
+    height: 22px;
+    fill: white;
+  }
+
+  /* Botão pulsando para chamar atenção */
+  .cta-button {
+    animation: pulse-cta 2.2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-cta {
+    0%, 100% { box-shadow: 0 8px 24px -4px rgba(37, 211, 102, 0.5), 0 0 0 1px rgba(74, 240, 129, 0.3) inset; }
+    50% { box-shadow: 0 8px 36px -2px rgba(37, 211, 102, 0.75), 0 0 0 1px rgba(74, 240, 129, 0.5) inset; }
+  }
+
+  /* ============ ESCASSEZ / VAGAS ============ */
+  .scarcity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 18px;
+    background: rgba(42, 22, 34, 0.6);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    font-size: 13px;
+    color: var(--text-soft);
+    backdrop-filter: blur(10px);
+  }
+
+  .scarcity .clock {
+    font-size: 16px;
+  }
+
+  .scarcity strong {
+    color: var(--rose);
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  /* ============ SEÇÃO BENEFÍCIOS ============ */
+  .benefits-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rose);
+    text-align: center;
+    margin: 8px 0 4px;
+    position: relative;
+  }
+
+  .benefits-title::before,
+  .benefits-title::after {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--rose-deep));
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+
+  .benefits-title::after {
+    background: linear-gradient(90deg, var(--rose-deep), transparent);
+  }
+
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-soft) 100%);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    transition: all 0.2s ease;
+  }
+
+  .benefit-item:hover {
+    border-color: var(--border-glow);
+    transform: translateX(2px);
+  }
+
+  .benefit-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(249, 197, 212, 0.15) 0%, rgba(240, 198, 116, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .benefit-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .benefit-text h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 2px;
+    line-height: 1.3;
+  }
+
+  .benefit-text p {
+    font-size: 12px;
+    color: var(--text-mute);
+    line-height: 1.4;
+  }
+
+  /* ============ BADGES INFERIORES ============ */
+  .badges-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .badge-mini {
+    text-align: center;
+    padding: 12px 6px;
+    background: rgba(42, 22, 34, 0.5);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+  }
+
+  .badge-mini .icon {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .badge-mini .label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-soft);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  /* ============ PROVA SOCIAL ============ */
+  .social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(37, 211, 102, 0.04) 100%);
+    border: 1px solid rgba(37, 211, 102, 0.25);
+    border-radius: 14px;
+    margin-top: 4px;
+  }
+
+  .avatars {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-deep);
+    margin-left: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .avatar:first-child { margin-left: 0; }
+  .avatar:nth-child(1) { background: linear-gradient(135deg, #f9c5d4, #e98aa7); }
+  .avatar:nth-child(2) { background: linear-gradient(135deg, #ffe7a8, #f0c674); }
+  .avatar:nth-child(3) { background: linear-gradient(135deg, #c5e3f9, #8abae9); }
+  .avatar:nth-child(4) { background: linear-gradient(135deg, #d4f9c5, #8ae990); }
+
+  .social-text {
+    font-size: 13px;
+    color: var(--text-soft);
+    line-height: 1.3;
+  }
+
+  .social-text strong {
+    color: var(--whats-glow);
+    font-weight: 700;
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-mute);
+    line-height: 1.5;
+  }
+
+  footer .seal {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: rgba(42, 22, 34, 0.4);
+    border: 1px solid var(--border-soft);
+    border-radius: 100px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: var(--text-soft);
+  }
+
+  footer .seal .check {
+    color: var(--whats-glow);
+    font-weight: 700;
+  }
+
+  footer .links {
+    margin-top: 6px;
+  }
+
+  footer a {
+    color: var(--text-mute);
+    text-decoration: none;
+    margin: 0 6px;
+  }
+
+  footer a:hover { color: var(--rose); }
+
+  /* ============ MOBILE FINETUNE ============ */
+  @media (max-width: 380px) {
+    h1 { font-size: 26px; }
+    .logo-wrap { width: 120px; height: 120px; }
+    .logo-emoji { font-size: 60px; }
+    .cta-button { font-size: 14px; padding: 17px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="badge-top">
+      <span class="dot"></span>
+      Grupo VIP Gratuito
+    </div>
+
+    <div class="logo-wrap">
+      <span class="logo-emoji">👼🏻</span>
+    </div>
+
+    <h1>
+      As melhores promoções do <span class="accent">mundo bebê</span>
+    </h1>
+    <p class="subtitle">
+      Fraldas, roupinhas, carrinhos, brinquedos e tudo pro seu pequeno — com descontos reais de até <strong style="color:var(--gold-soft)">70% OFF</strong>.
+    </p>
+
+    <!-- CTA Principal -->
+    <a href="#" class="cta-button" id="btnEntrar">
+      <svg class="icon-wa" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+      Entrar no Grupo Agora
+    </a>
+
+  </section>
+
+  <!-- ESCASSEZ -->
+  <div class="scarcity">
+    <span class="clock">⏰</span>
+    <span>Vagas restantes hoje: <strong id="vagas">7</strong></span>
+  </div>
+
+  <!-- BENEFÍCIOS -->
+  <p class="benefits-title">No grupo você vai encontrar</p>
+
+  <section class="benefits">
+
+    <div class="benefit-item">
+      <div class="benefit-icon">🍼</div>
+      <div class="benefit-text">
+        <h3>Fraldas com até 70% OFF</h3>
+        <p>Pampers, Huggies, MamyPoko e mais — todos os tamanhos</p>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <div class="benefit-icon">👶</div>
+      <div class="benefit-text">
+        <h3>Roupinhas e enxoval</h3>
+        <p>Bodies, macacões, mantas — selecionados a dedo</p>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <div class="benefit-icon">🛒</div>
+      <div class="benefit-text">
+        <h3>Carrinhos e bebê-conforto</h3>
+        <p>Marcas como Burigotto, Galzerano e Chicco em oferta</p>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <div class="benefit-icon">🎁</div>
+      <div class="benefit-text">
+        <h3>Cupons secretos exclusivos</h3>
+        <p>Códigos que só quem está no grupo recebe</p>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <div class="benefit-icon">⚡</div>
+      <div class="benefit-text">
+        <h3>Ofertas relâmpago em 1ª mão</h3>
+        <p>Avisamos antes que esgote — direto no seu WhatsApp</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- BADGES DE CONFIANÇA -->
+  <div class="badges-row">
+    <div class="badge-mini">
+      <div class="icon">🚚</div>
+      <span class="label">Frete Grátis</span>
+    </div>
+    <div class="badge-mini">
+      <div class="icon">💸</div>
+      <span class="label">Até 70% OFF</span>
+    </div>
+    <div class="badge-mini">
+      <div class="icon">🎟️</div>
+      <span class="label">Cupons Ativos</span>
+    </div>
+  </div>
+
+  <!-- PROVA SOCIAL -->
+  <div class="social-proof">
+    <div class="avatars">
+      <div class="avatar">👩🏻</div>
+      <div class="avatar">👩🏽</div>
+      <div class="avatar">👩🏼</div>
+      <div class="avatar">👩🏿</div>
+    </div>
+    <div class="social-text">
+      <strong>+8.500 mamães</strong> já estão economizando junto com a gente
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="seal">
+      <span class="check">✓</span> Grupo seguro e verificado
+    </div>
+    <div>👼🏻 Mutum Bebê & Fraldas 🧼</div>
+    <div class="links">
+      <a href="#" onclick="return false;">Política de Privacidade</a> ·
+      <a href="#" onclick="return false;">Termos de Uso</a>
+    </div>
+    <div style="margin-top:8px;opacity:0.6;">© 2026 — Todos os direitos reservados</div>
+  </footer>
+
+</main>
+
+<!-- ============================================================ -->
+<!-- 🔧 LINK DO GRUPO — TROQUE AQUI QUANDO O GRUPO ENCHER         -->
+<!-- ============================================================ -->
+<script>
+  // ▼▼▼ TROQUE APENAS ESTA LINHA QUANDO PRECISAR DE UM NOVO GRUPO ▼▼▼
+  const GRUPO_LINK = "https://chat.whatsapp.com/SEU_LINK_AQUI";
+  // ▲▲▲ TROQUE APENAS ESTA LINHA QUANDO PRECISAR DE UM NOVO GRUPO ▲▲▲
+
+  // Aplica o link no botão
+  const btn = document.getElementById('btnEntrar');
+  btn.href = GRUPO_LINK;
+  btn.target = "_blank";
+  btn.rel = "noopener";
+
+  // Dispara evento Lead no Pixel quando clicar
+  btn.addEventListener('click', function() {
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead');
+      fbq('trackCustom', 'EntrarGrupoWhatsApp');
+    }
+  });
+
+  // Contador de vagas — diminui sozinho para criar urgência (cosmético)
+  (function() {
+    const el = document.getElementById('vagas');
+    let v = parseInt(el.textContent);
+    setInterval(() => {
+      if (v > 2 && Math.random() > 0.6) {
+        v--;
+        el.textContent = v;
+      }
+    }, 18000);
+  })();
+</script>
+
+</body>
+</html>
